@@ -44,9 +44,27 @@
     .description {
       text-align: center;
       font-size: 1rem;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       color: #bfbfbf;
       font-style: italic;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 0.9rem;
+      letter-spacing: 3px;
+      margin: 30px 0 15px 0;
+      color: #999;
+      text-transform: uppercase;
+    }
+
+    .contract-box {
+      background: #141414;
+      padding: 15px;
+      border-radius: 12px;
+      border: 1px solid #333;
+      box-shadow: inset 0 0 15px rgba(255,255,255,0.05);
+      margin-bottom: 30px;
     }
 
     audio {
@@ -72,20 +90,25 @@
       letter-spacing: 2px;
       user-select: none;
     }
+
   </style>
 </head>
 
 <body>
   <div class="container">
+
     <img src="PORTADA.jpg" alt="Portada del álbum" />
+
     <h2>Código Inverso</h2>
     <p class="description">Pre-escucha limitada del álbum homónimo</p>
 
-    <img src="CONTRATO.jpg" 
-         alt="Contrato de confidencialidad" 
-         style="width:100%; border-radius:15px; margin-bottom:20px; border:1px solid #333; box-shadow:0 0 10px rgba(255,255,255,0.15);" />
+    <div class="section-title">Documento de Confidencialidad</div>
 
-    <!-- TRACKS -->
+    <div class="contract-box">
+      <img src="CONTRATO.jpg" alt="Contrato de confidencialidad" />
+    </div>
+
+    <div class="section-title">Registro de Audio</div>
 
     <div class="track">
       <p>01 - ya nada se ira</p>
