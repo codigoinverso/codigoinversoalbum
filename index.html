@@ -31,7 +31,7 @@ body::before {
     mix-blend-mode: overlay;
 }
 
-/* Viñeta oscura */
+/* Viñeta */
 body::after {
     content: "";
     position: fixed;
@@ -57,7 +57,7 @@ body::after {
     animation: flicker 6s infinite;
 }
 
-/* CLASSIFIED fantasma */
+/* Sello CLASSIFIED */
 .container::after {
     content: "CLASSIFIED";
     position: absolute;
@@ -124,7 +124,7 @@ audio {
     filter: grayscale(100%) contrast(120%) brightness(0.8);
 }
 
-/* Redacted más agresivo */
+/* Redacted */
 .redacted {
     background: #000;
     color: transparent;
@@ -143,12 +143,8 @@ audio {
 
 /* Responsive */
 @media (max-width: 600px) {
-    body {
-        padding: 30px 10px;
-    }
-    .container {
-        padding: 30px;
-    }
+    body { padding: 30px 10px; }
+    .container { padding: 30px; }
 }
 </style>
 </head>
@@ -167,26 +163,56 @@ ARCHIVO INTERNO — REF: CI-001-AR — 05/03/2026
 
 <img src="PORTADA.jpg" alt="Portada del álbum">
 
-<div class="section-title">REGISTRO DE AUDIO</div>
+<div class="section-title">tracklist</div>
 
 <div class="track">
-<p>01 — NOMBRE DEL TRACK</p>
+<p>01 — TRACK 1</p>
 <audio controls src="track1.mp3"></audio>
 </div>
 
 <div class="track">
-<p>02 — NOMBRE DEL TRACK (FT. <span class="redacted">COLABORACIÓN</span>)</p>
+<p>02 — TRACK 2</p>
 <audio controls src="track2.mp3"></audio>
 </div>
 
 <div class="track">
-<p>03 — NOMBRE DEL TRACK</p>
+<p>03 — TRACK 3</p>
 <audio controls src="track3.mp3"></audio>
 </div>
 
 <div class="track">
-<p>04 — NOMBRE DEL TRACK (FT. <span class="redacted">ARTISTA</span>)</p>
+<p>04 — TRACK 4</p>
 <audio controls src="track4.mp3"></audio>
+</div>
+
+<div class="track">
+<p>05 — TRACK 5</p>
+<audio controls src="track5.mp3"></audio>
+</div>
+
+<div class="track">
+<p>06 — TRACK 6 (FT. <span class="redacted">COLABORACIÓN</span>)</p>
+<audio controls src="track6.mp3"></audio>
+</div>
+
+<div class="track">
+<p>07 — TRACK 7</p>
+<audio controls src="track7.mp3"></audio>
+</div>
+
+<div class="track">
+<p>08 — TRACK 8</p>
+<audio controls src="track8.mp3"></audio>
+</div>
+
+<div class="track">
+<p>09 — TRACK 9 (FT. <span class="redacted">ARTISTA</span>)</p>
+<audio controls src="track9.mp3"></audio>
+</div>
+
+<div class="track">
+<p>10 — TRACK 10</p>
+<audio controls src="track10.mp3"></audio>
 </div>
 
 <div class="footer">
