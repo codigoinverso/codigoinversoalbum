@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Código Inverso – Expediente 001</title>
+<title>CODIGO INVERSO - ARCHIVO CLASIFICADO</title>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
@@ -12,98 +12,111 @@ body {
     margin: 0;
     padding: 40px 20px;
     font-family: 'Special Elite', monospace;
-    background: #d9d9d9;
-    color: #111;
+    background: #141414;
+    color: #e6e6e6;
     display: flex;
     justify-content: center;
     position: relative;
 }
 
-/* Grain overlay */
+/* Grain oscuro */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
     background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
-    opacity: 0.4;
+    opacity: 0.7;
     pointer-events: none;
-    mix-blend-mode: multiply;
+    mix-blend-mode: overlay;
 }
 
 .container {
-    max-width: 700px;
-    background: #f2f2f2;
-    padding: 40px;
-    border: 1px solid #999;
-    box-shadow: 0 0 40px rgba(0,0,0,0.3);
+    max-width: 750px;
+    background: #242424;
+    padding: 45px;
+    border: 1px solid #555;
+    box-shadow: 0 0 80px rgba(0,0,0,0.9);
     position: relative;
 }
 
-/* CLASSIFIED Stamp */
+/* Sello CLASSIFIED */
 .container::after {
     content: "CLASSIFIED";
     position: absolute;
-    top: 60px;
-    right: -80px;
+    top: 70px;
+    right: -90px;
     transform: rotate(-18deg);
     font-size: 3rem;
-    letter-spacing: 8px;
-    border: 4px solid #000;
-    padding: 10px 40px;
+    letter-spacing: 10px;
+    border: 4px solid #e6e6e6;
+    padding: 12px 50px;
     opacity: 0.12;
 }
 
+/* Header */
 h1 {
-    font-size: 1.6rem;
-    letter-spacing: 6px;
-    margin-bottom: 10px;
+    font-size: 1.8rem;
+    letter-spacing: 8px;
     text-transform: uppercase;
+    margin-bottom: 10px;
+    color: #ffffff;
 }
 
 .subheader {
-    font-size: 0.9rem;
-    margin-bottom: 30px;
-    border-left: 3px solid #000;
-    padding-left: 10px;
+    font-size: 0.85rem;
+    margin-bottom: 35px;
+    border-left: 3px solid #e6e6e6;
+    padding-left: 12px;
+    letter-spacing: 2px;
 }
 
 .section-title {
     font-size: 0.8rem;
-    letter-spacing: 4px;
-    margin: 30px 0 15px 0;
-    border-bottom: 1px solid #000;
-    padding-bottom: 5px;
+    letter-spacing: 5px;
+    margin: 35px 0 20px 0;
+    border-bottom: 1px solid #555;
+    padding-bottom: 6px;
 }
 
+/* Imagen */
 img {
     width: 100%;
-    margin-bottom: 25px;
-    border: 1px solid #aaa;
-    filter: grayscale(100%) contrast(110%);
+    margin-bottom: 30px;
+    border: 1px solid #666;
+    filter: grayscale(100%) contrast(120%);
 }
 
+/* Tracks */
 .track {
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 1px dashed #888;
+    margin-bottom: 30px;
+    padding-bottom: 18px;
+    border-bottom: 1px dashed #555;
 }
 
 .track p {
-    margin: 0 0 8px 0;
+    margin: 0 0 10px 0;
     font-size: 0.85rem;
     letter-spacing: 3px;
 }
 
 audio {
     width: 100%;
-    filter: grayscale(100%) contrast(90%);
+    filter: grayscale(100%) contrast(100%) brightness(0.9);
 }
 
-/* Redacted effect */
+/* Redacted */
 .redacted {
     background: #000;
     color: transparent;
-    padding: 0 8px;
+    padding: 0 10px;
+}
+
+/* Footer */
+.footer {
+    margin-top: 40px;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    opacity: 0.6;
 }
 
 /* Responsive */
@@ -119,72 +132,45 @@ audio {
 </head>
 
 <body>
+
 <div class="container">
 
 <h1>CÓDIGO INVERSO</h1>
 <div class="subheader">
-    EXPEDIENTE 001-A<br>
-    CONFIDENTIAL ACCESS – PRE-ESCUCHA LIMITADA
+ARCHIVO INTERNO — REF: CI-001-AR — 05/03/2026
 </div>
 
-<div class="section-title">ARCHIVO VISUAL ADJUNTO</div>
+<div class="section-title">EVIDENCIA VISUAL</div>
+
 <img src="PORTADA.jpg" alt="Portada del álbum">
 
-<div class="section-title">ANEXO – DOCUMENTO DE CONFIDENCIALIDAD</div>
-<img src="CONTRATO.jpg" alt="Contrato clasificado">
-
-<div class="section-title">REGISTRO DE PISTAS</div>
+<div class="section-title">REGISTRO DE AUDIO</div>
 
 <div class="track">
-<p>TRACK 01 – YA NADA SE IRA</p>
-<audio controls><source src="cancion1.mp3" type="audio/mpeg"></audio>
+<p>01 — NOMBRE DEL TRACK</p>
+<audio controls src="track1.mp3"></audio>
 </div>
 
 <div class="track">
-<p>TRACK 02 – EL VENENO</p>
-<audio controls><source src="cancion2.mp3" type="audio/mpeg"></audio>
+<p>02 — NOMBRE DEL TRACK (FT. <span class="redacted">COLABORACIÓN</span>)</p>
+<audio controls src="track2.mp3"></audio>
 </div>
 
 <div class="track">
-<p>TRACK 03 – MARIA (CON <span class="redacted">██████████</span>)</p>
-<audio controls><source src="cancion3.mp3" type="audio/mpeg"></audio>
+<p>03 — NOMBRE DEL TRACK</p>
+<audio controls src="track3.mp3"></audio>
 </div>
 
 <div class="track">
-<p>TRACK 04 – NO TENGO NADA QUE DEC!R</p>
-<audio controls><source src="cancion4.mp3" type="audio/mpeg"></audio>
+<p>04 — NOMBRE DEL TRACK (FT. <span class="redacted">ARTISTA</span>)</p>
+<audio controls src="track4.mp3"></audio>
 </div>
 
-<div class="track">
-<p>TRACK 05 – [TOTALMENTE INDESCIFRABLE]</p>
-<audio controls><source src="cancion5.mp3" type="audio/mpeg"></audio>
-</div>
-
-<div class="track">
-<p>TRACK 06 – CUANDO EL SILENCIO SE HACE GRIS</p>
-<audio controls><source src="cancion6.mp3" type="audio/mpeg"></audio>
-</div>
-
-<div class="track">
-<p>TRACK 07 – TIRAME FLORES (CON <span class="redacted">██████████</span>)</p>
-<audio controls><source src="cancion7.mp3" type="audio/mpeg"></audio>
-</div>
-
-<div class="track">
-<p>TRACK 08 – DEBAJO DE MI (CON <span class="redacted">██████████</span>)</p>
-<audio controls><source src="cancion8.mp3" type="audio/mpeg"></audio>
-</div>
-
-<div class="track">
-<p>TRACK 09 – ME ENCONTRARAS MAÑANA</p>
-<audio controls><source src="cancion9.mp3" type="audio/mpeg"></audio>
-</div>
-
-<div class="track">
-<p>TRACK 10 – NO BAJES ESTA VEZ</p>
-<audio controls><source src="cancion10.mp3" type="audio/mpeg"></audio>
+<div class="footer">
+DOCUMENTO RESTRINGIDO — DISTRIBUCIÓN NO AUTORIZADA
 </div>
 
 </div>
+
 </body>
 </html>
