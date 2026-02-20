@@ -1,225 +1,162 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CODIGO INVERSO - ARCHIVO CLASIFICADO</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Código Inverso – Código Inverso</title>
 
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #000000, #1a1a1a, #2e2e2e, #000000);
+      color: #e6e6e6;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-body {
-    margin: 0;
-    padding: 60px 20px;
-    font-family: 'Special Elite', monospace;
-    background: #0a0a0a;
-    color: #f0f0f0;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    overflow-x: hidden;
-}
+    .container {
+      max-width: 600px;
+      background: #0d0d0d;
+      padding: 20px;
+      margin-top: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 20px rgba(255,255,255,0.1);
+      border: 1px solid #333;
+    }
 
-/* Grain fuerte */
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background-image: url("https://www.transparenttextures.com/patterns/noise.png");
-    opacity: 0.8;
-    pointer-events: none;
-    mix-blend-mode: overlay;
-}
+    img {
+      width: 100%;
+      border-radius: 15px;
+      margin-bottom: 20px;
+    }
 
-/* Viñeta */
-body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: radial-gradient(circle at center, transparent 40%, rgba(0,0,0,0.9) 100%);
-    pointer-events: none;
-}
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 5px;
+      color: #ffffff;
+      letter-spacing: 1px;
+    }
 
-/* Parpadeo leve */
-@keyframes flicker {
-    0% { opacity: 1; }
-    50% { opacity: 0.98; }
-    100% { opacity: 1; }
-}
+    .description {
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 20px;
+      color: #bfbfbf;
+      font-style: italic;
+    }
 
-.container {
-    max-width: 760px;
-    background: #111111;
-    padding: 50px;
-    border: 1px solid #333;
-    box-shadow: 0 0 120px rgba(0,0,0,1);
-    position: relative;
-    animation: flicker 6s infinite;
-}
+    audio {
+      width: 100%;
+      filter: grayscale(100%);
+    }
 
-/* Sello CLASSIFIED */
-.container::after {
-    content: "CLASSIFIED";
-    position: absolute;
-    top: 80px;
-    right: -100px;
-    transform: rotate(-18deg);
-    font-size: 3rem;
-    letter-spacing: 12px;
-    border: 4px solid #ffffff;
-    padding: 12px 60px;
-    opacity: 0.07;
-}
+    .track {
+      margin-bottom: 25px;
+      background: #1a1a1a;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #333;
+      box-shadow: inset 0 0 10px rgba(255,255,255,0.05);
+    }
 
-/* Header */
-h1 {
-    font-size: 1.9rem;
-    letter-spacing: 10px;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-    color: #ffffff;
-}
-
-.subheader {
-    font-size: 0.8rem;
-    margin-bottom: 40px;
-    border-left: 3px solid #666;
-    padding-left: 12px;
-    letter-spacing: 3px;
-    opacity: 0.8;
-}
-
-.section-title {
-    font-size: 0.75rem;
-    letter-spacing: 6px;
-    margin: 40px 0 25px 0;
-    border-bottom: 1px solid #333;
-    padding-bottom: 6px;
-    opacity: 0.7;
-}
-
-/* Imagen */
-img {
-    width: 100%;
-    margin-bottom: 35px;
-    border: 1px solid #444;
-    filter: grayscale(100%) contrast(140%) brightness(0.85);
-}
-
-/* Tracks */
-.track {
-    margin-bottom: 35px;
-    padding-bottom: 20px;
-    border-bottom: 1px dashed #333;
-}
-
-.track p {
-    margin: 0 0 12px 0;
-    font-size: 0.8rem;
-    letter-spacing: 4px;
-}
-
-audio {
-    width: 100%;
-    filter: grayscale(100%) contrast(120%) brightness(0.8);
-}
-
-/* Redacted */
-.redacted {
-    background: #000;
-    color: transparent;
-    padding: 0 12px;
-    letter-spacing: 5px;
-}
-
-/* Footer */
-.footer {
-    margin-top: 50px;
-    font-size: 0.65rem;
-    letter-spacing: 4px;
-    opacity: 0.5;
-    text-align: center;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-    body { padding: 30px 10px; }
-    .container { padding: 30px; }
-}
-</style>
+    /* ===== EFECTO REDACTED GRIS ===== */
+    .redacted {
+      background-color: #8a8a8a;
+      color: transparent;
+      padding: 0 6px;
+      border-radius: 3px;
+      letter-spacing: 2px;
+      user-select: none;
+    }
+  </style>
 </head>
 
 <body>
+  <div class="container">
+    <img src="PORTADA.jpg" alt="Portada del álbum" />
+    <h2>Código Inverso</h2>
+    <p class="description">Pre-escucha limitada del álbum homónimo</p>
 
-<div class="container">
+    <img src="CONTRATO.jpg" 
+         alt="Contrato de confidencialidad" 
+         style="width:100%; border-radius:15px; margin-bottom:20px; border:1px solid #333; box-shadow:0 0 10px rgba(255,255,255,0.15);" />
 
-<h1>CÓDIGO INVERSO</h1>
+    <!-- TRACKS -->
 
-<div class="subheader">
-ARCHIVO INTERNO — REF: CI-001-AR — 05/03/2026
-</div>
+    <div class="track">
+      <p>01 - ya nada se ira</p>
+      <audio controls>
+        <source src="cancion1.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
 
-<div class="section-title">EVIDENCIA VISUAL</div>
+    <div class="track">
+      <p>02 - el veneno</p>
+      <audio controls>
+        <source src="cancion2.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
 
-<img src="PORTADA.jpg" alt="Portada del álbum">
+    <div class="track">
+      <p>03 - maria (con <span class="redacted">20189161626</span>)</p>
+      <audio controls>
+        <source src="cancion3.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
 
-<div class="section-title">tracklist</div>
+    <div class="track">
+      <p>04 - no tengo nada que dec!r</p>
+      <audio controls>
+        <source src="cancion4.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
 
-<div class="track">
-<p>01 — TRACK 1</p>
-<audio controls src="track1.mp3"></audio>
-</div>
+    <div class="track">
+      <p>05 - <span class="redacted">totalmente indescifrable</span></p>
+      <audio controls>
+        <source src="cancion5.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
 
-<div class="track">
-<p>02 — TRACK 2</p>
-<audio controls src="track2.mp3"></audio>
-</div>
+    <div class="track">
+      <p>06 - cuando el silencio se hace gris</p>
+      <audio controls>
+        <source src="cancion6.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
 
-<div class="track">
-<p>03 — TRACK 3</p>
-<audio controls src="track3.mp3"></audio>
-</div>
+    <div class="track">
+      <p>07 - tirame flores (con <span class="redacted">16114141125</span>)</p>
+      <audio controls>
+        <source src="cancion7.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
 
-<div class="track">
-<p>04 — TRACK 4</p>
-<audio controls src="track4.mp3"></audio>
-</div>
+    <div class="track">
+      <p>08 - debajo de mi (con <span class="redacted">1221121 251820151249</span>)</p>
+      <audio controls>
+        <source src="cancion8.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
 
-<div class="track">
-<p>05 — TRACK 5</p>
-<audio controls src="track5.mp3"></audio>
-</div>
+    <div class="track">
+      <p>09 - me encontraras mañana</p>
+      <audio controls>
+        <source src="cancion9.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
 
-<div class="track">
-<p>06 — TRACK 6 (FT. <span class="redacted">COLABORACIÓN</span>)</p>
-<audio controls src="track6.mp3"></audio>
-</div>
+    <div class="track">
+      <p>10 - no bajes esta vez</p>
+      <audio controls>
+        <source src="cancion10.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
 
-<div class="track">
-<p>07 — TRACK 7</p>
-<audio controls src="track7.mp3"></audio>
-</div>
-
-<div class="track">
-<p>08 — TRACK 8</p>
-<audio controls src="track8.mp3"></audio>
-</div>
-
-<div class="track">
-<p>09 — TRACK 9 (FT. <span class="redacted">ARTISTA</span>)</p>
-<audio controls src="track9.mp3"></audio>
-</div>
-
-<div class="track">
-<p>10 — TRACK 10</p>
-<audio controls src="track10.mp3"></audio>
-</div>
-
-<div class="footer">
-DOCUMENTO RESTRINGIDO — DISTRIBUCIÓN NO AUTORIZADA
-</div>
-
-</div>
-
+  </div>
 </body>
 </html>
